@@ -73,4 +73,41 @@
         trip2.print(); // 당신의 선글라스와(과) 당신의 오색 깃발와(과) 당신의 카메라를(을) 가져오십시오.
     }
 
+    /**
+     * ES6 모듈
+     */
+    {
+        // export const print(message) => log(message, new Date()) ;
+        // export const log(message, timestamp) => console.log(`${timestamp.toString()}: ${message}`);
+
+        /**
+        * export를 사용해 다른 모듈에서 활용하도록 이름을 외부에 익스포트할 수 있다.
+        */
+
+        // const freel = new Expedition('Mt. Freel', 2, ['water', 'snack']);
+        // export default freel;
+
+        /**
+         * export default는 오직 하나의 이름만 노출하는 모듈에서 사용할 수 있다.
+         * 
+         * 모듈은 import 명령을 사용해 다른 자바스크립트의 파일을 불러와 사용할 수 있다.
+         * export default를 사용해 이름만 노출한 경우에는 노춣된 대상을 구조분해 없이 한 이름으로 부를 수 있다.
+         */
+
+        // import { print, log } from './text-helpers'
+        // import freel from './mt-freel'
+
+        /**
+         * 모듈에서 가져운 대상에 다른 이름을 부여할 수도 있다.
+         */
+
+        // improt { print as p, log as l } from './text-helpers'
+
+        /**
+         * import * 를 사용하면 다른 모듈에서 가져온 모든 이름을 사용자가 정한 로컬 이름 공간 안에 가둘수 있다.
+         */
+        
+        // import * as fns from './text-helpers'
+    }
+
 })();
